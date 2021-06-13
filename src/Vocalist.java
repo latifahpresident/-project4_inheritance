@@ -1,4 +1,4 @@
-public class Vocalist extends Artist{
+public class Vocalist extends Artist implements GetArtistInfo{
     String influencedBy;
 
     public Vocalist(String name, String country, String style, String timePeriod, String influencedBy) {
@@ -6,10 +6,10 @@ public class Vocalist extends Artist{
         this.influencedBy = influencedBy;
     }
 
-    public void show() {
+    public void getArtistInfo() {
 
         System.out.printf(
-                "Influenced By: %s %n ",
-                influencedBy );
+                " %n Artist Info: %n Name: %s %n Country: %s %n Style: %s %n Time Period: %s %n Influenced By: %s %n %n ----------------------- ",
+                name, country, style, timePeriod, influencedBy );
     }
 }

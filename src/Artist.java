@@ -1,4 +1,4 @@
-public class Artist {
+public class Artist implements GetArtistInfo {
     String name;
     String country;
     String style;
@@ -10,12 +10,9 @@ public class Artist {
         this.style = style;
         this.timePeriod = timePeriod;
     }
-    public Artist(){}
-
-    public void show() {
-
-        System.out.printf(
-                "Name: %s %n Country: %s %n Style: %s %n Time Period: %s %n",
+    public void getArtistInfo() {
+        System.out.printf(" Artist Info: %n Name: %s %n Country: %s %n Style: %s %n Time Period: %s %n %n ----------------------- ",
                 name, country, style, timePeriod );
     }
+
 }
